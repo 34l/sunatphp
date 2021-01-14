@@ -88,14 +88,12 @@
 				);
 
 				$url = "https://e-consultaruc.sunat.gob.pe/cl-ti-itmrconsruc/jcrS00Alias";
-				//$url = "https://e-consultaruc.sunat.gob.pe/cl-ti-itmrconsruc/frameCriterioBusqueda.jsp";
-
+				
 				$response = $this->curl->send( $url, $data );
 				
 				if( $this->curl->getHttpStatus()==200 && $response!="" )
 				{
 					//RazonSocial
-					//$patron='/<input type="hidden" name="desRuc" value="(.*)">/';
 					$patron = '/<td  class="bg" colspan=3>(.*)<\/td>/';
 					$output = preg_match_all($patron, $response, $matches, PREG_SET_ORDER);
 					
