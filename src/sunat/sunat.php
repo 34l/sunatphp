@@ -101,7 +101,7 @@
 					{
 
 						$RS = utf8_encode(str_replace('"','', ($matches[0][1])));
-						$RS = substr(trim($RS), 13, strlen(trim($RS)));
+						$RS = substr(trim($RS), 14, strlen(trim($RS)));
 						$rtn = array(
 							"ruc"=>$ruc,
 							"razon_social"=>$RS
